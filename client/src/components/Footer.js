@@ -52,9 +52,11 @@ const FooterContainer = styled.div`
     padding: 1rem 4rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    border-top: 1px solid #e0e0e0;
     @media screen and (max-width: 650px) {
         padding: 2rem 1rem;
+        justify-content: center;
     }
 `;
 const FooterSocialMedia = styled.div`

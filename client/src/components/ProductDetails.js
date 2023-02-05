@@ -6,22 +6,16 @@ import logo from "../assets/loadingIcon.gif";
 import { ProductContext } from "./ProductContext";
 import { CartContext } from "./CartContext";
 
-//this component controls the detail page for each product
 const ProductDetails = () => {
     const [currentProduct, setCurrentProduct] = useState();
     const [company, setCompany] = useState();
-    // import the add to cart func from context
     const {
         actions: { addItemToCart },
     } = useContext(CartContext);
-    // grab the id from the params
     const id = useParams();
-    //grab the all products from the context
     const { allProducts, sales } = useContext(ProductContext);
-    //on mount, filter from the productsContext to retain
-    //only the right product infos
+
     useEffect(() => {
-        //the condition to make sure we render if all products is set
         if (allProducts) {
             const currentItem = allProducts.filter((product) => {
                 return product._id === id.productId;
@@ -30,7 +24,6 @@ const ProductDetails = () => {
         }
     }, [allProducts]);
 
-    //fetch to get the company info
     useEffect(() => {
         if (currentProduct) {
             fetch(`/api/get-company/${currentProduct.companyId}`)
@@ -39,28 +32,24 @@ const ProductDetails = () => {
         }
     }, [currentProduct]);
 
-    //initialize sale as false
     let sale = false;
-    //initialize saleDiscount as null
     let saleDiscount = null;
     let salePrice = null;
-    //if our item id is in the sale array, sale will be true
+
     sales?.forEach((item) => {
-        //make the discount available here
         saleDiscount = item.salesDiscount;
         if (item._id === currentProduct?._id) {
             sale = true;
-            //calculates the after discount price of the item
             salePrice = Math.floor(
                 currentProduct.price.split("$")[1] * (1 - saleDiscount)
             );
         }
     });
 
-    //handle to use the addtocart func
     const handleAdd = () => {
         addItemToCart(currentProduct._id);
     };
+
     return (
         <Wrapper>
             {!currentProduct || !company ? (
@@ -186,9 +175,9 @@ const InfosContainer = styled.div`
         width: auto;
         text-align: center;
         h3 {
-        font-size: medium;
-        max-width: 75%;
-      }
+            font-size: medium;
+            max-width: 75%;
+        }
     }
 `;
 const Wrapper = styled.div``;

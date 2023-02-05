@@ -9,10 +9,9 @@ const SearchBar = () => {
     const navigate = useNavigate();
     const searchBarRef = useRef(null);
     const [selectedResultsIndex, setSelectedResultsIndex] = useState(0); // This state is to be used later for the selection of the search bar results with the keyboard
-    const [searchInput, setSearchInput] = useState(""); //search input
+    const [searchInput, setSearchInput] = useState("");
     const { cats, allProducts } = useContext(ProductContext);
 
-    //HANDLECHANGE FUNCTION TO UPDATE SEARCH INPUT WHILE USER TYPES INTO SEARCHBAR
     const handleChange = (ev) => {
         ev.preventDefault();
         setSearchInput(ev.target.value);

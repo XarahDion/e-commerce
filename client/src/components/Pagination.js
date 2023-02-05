@@ -3,15 +3,9 @@ import styled from "styled-components";
 import logo from "../assets/loadingIcon.gif";
 
 const Pagination = (props) => {
-    //props from Product Page, go there to see more
-    const {
-        currentPage, // current page
-        setCurrentPage, // set current page
-        products, // products being paginated
-        params, // params of products page
-    } = props;
+    const { currentPage, setCurrentPage, products, params } = props;
 
-    const limit = 12; // PAGINATION LIMIT OF ITEMS PER PAGE.
+    const limit = 12;
     let pages = products?.length / limit; // number of pages is total # of products/limit
     pages = Math.ceil(pages); // round up page total
 
@@ -55,6 +49,7 @@ const Pagination = (props) => {
         </>
     );
 };
+
 const Logo = styled.img`
     width: 50px;
     height: 50px;

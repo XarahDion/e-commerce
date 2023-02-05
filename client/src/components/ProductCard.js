@@ -2,37 +2,32 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { ProductContext } from "./ProductContext";
+
 const ProductCard = ({ item }) => {
     const navigate = useNavigate();
     // Bring in sales which is a random array of items and discounts rate from allProducts//
     // it is calculated only once in the file (when the fetch occurs )
-    // alternatively, this  logic could have been created and put into the database.
     const { sales } = useContext(ProductContext);
-    // initialize sale as false
     let sale = false;
-    // console.log(sales)
     let salePrice = null;
     let salesDiscount = null;
-    // if our item Id is in that array of sale ids, toggle sale to true.. get salesdisocunt rate
+
     sales?.forEach((saleItem, index) => {
         salesDiscount = saleItem.salesDiscount;
-
         if (saleItem._id === item?._id) {
             sale = true;
         }
     });
 
-    let roundedItemPrice = Math.round(item.price.slice(1)); // round the last price and remove dollar sign
-    salePrice = roundedItemPrice * (1 - salesDiscount); // apply discount rate to old price
-    salePrice = parseFloat(salePrice.toFixed(0)); // fixing float
+    let roundedItemPrice = Math.round(item.price.slice(1));
+    salePrice = roundedItemPrice * (1 - salesDiscount);
+    salePrice = parseFloat(salePrice.toFixed(0));
 
-    // if user hits a product, navigate that its page
     const handleNavigate = () => {
         navigate(`/products/${item._id}`);
     };
-    // shorter item name for aesthical reasons
+
     let shortItemName = item.name.split(" ").slice(0, 6).join(" ");
-    // console.log(item.price)
 
     return (
         <Wrapper onClick={handleNavigate}>

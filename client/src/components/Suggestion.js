@@ -64,7 +64,7 @@ const SecondaryTitles = styled.div`
         }
     }
     @media (max-width: 768px) {
-      padding-top: 42px;
+        padding-top: 42px;
     }
 `;
 const SuggestionsWrapper = styled.div`

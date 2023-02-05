@@ -12,33 +12,29 @@ const EmblaCarousel = ({ slides, options = { loop: false } }) => {
         )
     );
 
-    const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]); // <== Here we pass the autoplay instance to the hook
-    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false); // <== Here we set the state for the prev button
-    const [nextBtnEnabled, setNextBtnEnabled] = useState(false); // <== Here we set the state for the next button
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
+    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+    const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
     const scrollNext = useCallback(() => {
-        // scrollNext is a function that will be called when the next button is clicked
         if (!emblaApi) return;
         emblaApi.scrollNext();
         autoplay.current.reset();
     }, [emblaApi]);
 
     const scrollPrev = useCallback(() => {
-        // scrollPrev is a function that will be called when the previous button is clicked
         if (!emblaApi) return;
         emblaApi.scrollPrev();
         autoplay.current.reset();
     }, [emblaApi]);
 
     const onSelect = useCallback(() => {
-        // onSelect is a function that will be called when the user scrolls the carousel
         if (!emblaApi) return;
         setPrevBtnEnabled(emblaApi.canScrollPrev());
         setNextBtnEnabled(emblaApi.canScrollNext());
     }, [emblaApi]);
 
     useEffect(() => {
-        // useEffect is a function that will be called when the component mounts
         if (!emblaApi) return;
         onSelect();
         emblaApi.on("select", onSelect);

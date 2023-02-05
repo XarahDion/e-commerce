@@ -81,7 +81,7 @@ const HeaderContainer = styled.div`
         flex-direction: column;
     }
     @media screen and (max-width: 500px) {
-        padding: 1rem ;
+        padding: 1rem;
     }
 `;
 const LogoContainer = styled.div`
