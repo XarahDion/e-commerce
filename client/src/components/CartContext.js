@@ -52,7 +52,7 @@ export const CartProvider = ({ children }) => {
     const [rerender, setRerender] = useState(false);
 
     useEffect(() => {
-        fetch("/api/get-cart")
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/get-cart`)
             .then((res) => res.json())
             .then((data) => {
                 setCart(data.data);

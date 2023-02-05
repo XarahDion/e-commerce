@@ -12,7 +12,7 @@ const OrderPage = ({ setorderId }) => {
     /// POSTs the order when the order now button is clicked on the Form
     const handleSubmit = (e, formData) => {
         e.preventDefault();
-        fetch("/api/add-order", {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/add-order`, {
             method: "POST",
             headers: {
                 Accept: "application/json",

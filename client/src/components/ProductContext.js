@@ -19,7 +19,7 @@ export const ProductProvider = ({ children }) => {
     // FETCH ITEMS
 
     useEffect(() => {
-        fetch(`/api/get-items/`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/get-items/`)
             .then((res) => res.json())
             .then((res) => {
                 setAllProducts(res.data);
@@ -98,7 +98,9 @@ export const ProductProvider = ({ children }) => {
     // it would not filter when user refreshes, but only when they navigate to it from another page.
     useEffect(() => {
         if (cats?.includes(filter)) {
-            fetch(`/api/get-item/by-category/${filter}`)
+            fetch(
+                `${process.env.REACT_APP_BACKEND_URL}/get-item/by-category/${filter}`
+            )
                 .then((res) => res.json())
                 .then((res) => {
                     setFilteredProducts(res.data);
