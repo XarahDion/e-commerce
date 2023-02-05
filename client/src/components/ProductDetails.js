@@ -27,7 +27,7 @@ const ProductDetails = () => {
     useEffect(() => {
         if (currentProduct) {
             fetch(
-                `${process.env.REACT_APP_BACKEND_URL}/get-company/${currentProduct.companyId}`
+                `${process.env.REACT_APP_BACKEND_URL}/api/get-company/${currentProduct.companyId}`
             )
                 .then((res) => res.json())
                 .then((data) => setCompany(data.data));

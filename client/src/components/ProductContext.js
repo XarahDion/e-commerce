@@ -19,7 +19,7 @@ export const ProductProvider = ({ children }) => {
     // FETCH ITEMS
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/get-items/`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-items/`)
             .then((res) => res.json())
             .then((res) => {
                 setAllProducts(res.data);
@@ -99,7 +99,7 @@ export const ProductProvider = ({ children }) => {
     useEffect(() => {
         if (cats?.includes(filter)) {
             fetch(
-                `${process.env.REACT_APP_BACKEND_URL}/get-item/by-category/${filter}`
+                `${process.env.REACT_APP_BACKEND_URL}/api/get-item/by-category/${filter}`
             )
                 .then((res) => res.json())
                 .then((res) => {

@@ -1,6 +1,6 @@
 //this function recieves an item Id and post it to the backend
 export const addToCart = (id, setRerender, rerender) => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/add-to-cart`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/add-to-cart`, {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -24,7 +24,7 @@ export const addToCart = (id, setRerender, rerender) => {
 };
 //this function recievs an Id and deletes it from backend
 export const deleteFromCart = (id, setRerender, rerender) => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/delete-item/${id}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/delete-item/${id}`, {
         method: "DELETE",
     })
         .then((res) => res.json())
@@ -39,7 +39,7 @@ export const deleteFromCart = (id, setRerender, rerender) => {
 
 //this functions clear the cart from the DB
 export const clearTheCart = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/clear-cart`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/clear-cart`, {
         method: "DELETE",
     })
         .then((res) => res.json())
