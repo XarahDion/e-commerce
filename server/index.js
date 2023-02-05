@@ -2,7 +2,7 @@
 
 const express = require("express");
 const morgan = require("morgan");
-
+const cors = require("cors")
 const PORT = 4000;
 
 const {
@@ -37,6 +37,9 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
+  .use(cors({
+    origin: ['https://e-commerce-zl6k.onrender.com']
+}))
 
   .get("/api/get-items", getItems)
   .get("/api/get-companies", getCompanies)
