@@ -1,0 +1,47 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:4000",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "embla-carousel": "^7.0.5",
+    "embla-carousel-autoplay": "^7.0.5",
+    "embla-carousel-react": "^7.0.5",
+    "feather-icons": "^4.29.0",
+    "nodemon": "^2.0.20",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.10",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.6"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
