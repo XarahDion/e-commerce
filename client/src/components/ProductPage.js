@@ -134,6 +134,7 @@ const Explore = styled.div`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0rem 3rem;
 `;
 const ProductGrid = styled.div`
     padding-top: 20px;

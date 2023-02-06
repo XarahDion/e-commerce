@@ -11,7 +11,7 @@ const ProductCard = ({ item }) => {
     let sale = false;
     let salePrice = null;
     let salesDiscount = null;
-
+    
     sales?.forEach((saleItem, index) => {
         salesDiscount = saleItem.salesDiscount;
         if (saleItem._id === item?._id) {
@@ -19,9 +19,9 @@ const ProductCard = ({ item }) => {
         }
     });
 
-    let roundedItemPrice = Math.round(item.price.slice(1));
-    salePrice = roundedItemPrice * (1 - salesDiscount);
-    salePrice = parseFloat(salePrice.toFixed(0));
+    let roundedItemPrice = Math.round(item.price.slice(1)); 
+    salePrice = roundedItemPrice * (1 - salesDiscount); 
+    salePrice = parseFloat(salePrice.toFixed(0)); 
 
     const handleNavigate = () => {
         navigate(`/products/${item._id}`);
@@ -128,7 +128,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 5px;
+    margin: 10px;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 48px;
