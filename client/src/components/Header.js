@@ -73,9 +73,8 @@ const ShoppingCartIconContainer = styled.div`
 `;
 const HeaderContainer = styled.div`
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 2rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
     @media screen and (max-width: 1070px) {
         padding: 1rem 4rem;
         flex-direction: column;
@@ -88,6 +87,7 @@ const LogoContainer = styled.div`
     width: 180px;
     display: flex;
     align-items: center;
+    margin-left: 2rem;
     @media screen and (max-width: 590px) {
         width: 120px;
     }

@@ -59,8 +59,9 @@ const Wrapper = styled.div`
     border-top: 1px solid #e0e0e0;
     width: 100%;
     padding: 5px;
+    margin-bottom: 1rem;
     @media (max-width: 650px) {
-        display: none;
+        flex-wrap: wrap
     }
 `;
 const Category = styled.button`
@@ -79,6 +80,10 @@ const Category = styled.button`
         font-size: 12px;
         padding: 4px 8px;
         width: 160px;
+    }
+    @media (max-width: 650px) {
+        width: 120px;
+        height: 24px;
     }
 `;
 export default SubHeader;

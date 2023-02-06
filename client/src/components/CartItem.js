@@ -1,16 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 import { ProductContext } from "./ProductContext";
-import logo from "../assets/loadingIcon.gif";
 import styled from "styled-components";
 
-/// renders each item in cart
 const CartItem = ({ item, handleAdd, handleRemove, occurences }) => {
     const [currentItem, setCurrentItem] = useState();
     const { allProducts, sales } = useContext(ProductContext);
     const { state, cart } = useContext(CartContext);
 
-    /// returns array of items in cart from AllProducts based on item (itemId)
     useEffect(() => {
         if (allProducts && item) {
             const filteredArr = allProducts.filter((product) => {
@@ -19,14 +16,13 @@ const CartItem = ({ item, handleAdd, handleRemove, occurences }) => {
             setCurrentItem(filteredArr[0]);
         }
     }, [item, allProducts, state.cartItems, cart]);
-    //initialize sale as false
+
     let sale = false;
-    //initialize saleDiscount as null
     let saleDiscount = null;
     let salePrice = null;
-    //if our item id is in the sale array, sale will be true
+
     sales?.forEach((item) => {
-        //make the discount available here
+        //if our item id is in the sale array, sale will be true
         saleDiscount = item.salesDiscount;
         if (item._id === currentItem?._id) {
             sale = true;
@@ -40,7 +36,7 @@ const CartItem = ({ item, handleAdd, handleRemove, occurences }) => {
     return (
         <>
             {!currentItem ? (
-                <Logo src={logo} alt="loading" />
+                <></>
             ) : (
                 <ItemDiv>
                     {sale ? <SaleTag>SALE</SaleTag> : <></>}
@@ -59,7 +55,6 @@ const CartItem = ({ item, handleAdd, handleRemove, occurences }) => {
                         </Sales>
                         <h4>x {occurences}</h4>
                         <ButtonDiv>
-                            {/* //call the handle add function */}
                             <BtnAdd onClick={(e) => handleAdd(e, currentItem)}>
                                 Add to cart
                             </BtnAdd>
@@ -178,10 +173,6 @@ const ItemDiv = styled.div`
         max-width: 300px;
         padding-bottom: 14px;
     }
-`;
-const Logo = styled.img`
-    width: 50px;
-    height: 50px;
 `;
 
 export default CartItem;

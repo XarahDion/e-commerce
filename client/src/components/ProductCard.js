@@ -6,12 +6,12 @@ import { ProductContext } from "./ProductContext";
 const ProductCard = ({ item }) => {
     const navigate = useNavigate();
     // Bring in sales which is a random array of items and discounts rate from allProducts//
-    // it is calculated only once in the file (when the fetch occurs )
+    // it is calculated only once in the file (when the fetch occurs)
     const { sales } = useContext(ProductContext);
     let sale = false;
     let salePrice = null;
     let salesDiscount = null;
-    
+
     sales?.forEach((saleItem, index) => {
         salesDiscount = saleItem.salesDiscount;
         if (saleItem._id === item?._id) {
@@ -19,9 +19,9 @@ const ProductCard = ({ item }) => {
         }
     });
 
-    let roundedItemPrice = Math.round(item.price.slice(1)); 
-    salePrice = roundedItemPrice * (1 - salesDiscount); 
-    salePrice = parseFloat(salePrice.toFixed(0)); 
+    let roundedItemPrice = Math.round(item.price.slice(1));
+    salePrice = roundedItemPrice * (1 - salesDiscount);
+    salePrice = parseFloat(salePrice.toFixed(0));
 
     const handleNavigate = () => {
         navigate(`/products/${item._id}`);

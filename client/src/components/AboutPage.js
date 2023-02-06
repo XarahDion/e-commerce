@@ -41,6 +41,9 @@ const HeroImageWrapper = styled.div`
     margin: 0 30px;
     border-radius: 40px;
     margin-bottom: 4rem;
+    @media screen and (max-width: 650px) {
+        margin-bottom: 2rem;
+    }
 `;
 const AboutPageContainer = styled.div`
     margin: 2rem;
@@ -52,11 +55,11 @@ const AboutPageContainer = styled.div`
     max-width: 100%;
     h1 {
         text-align: left;
-        margin-left: 10%;
+        margin-left: 8%;
     }
     h2 {
         text-align: left;
-        margin-left: 10%;
+        margin-left: 8%;
     }
     @media screen and (max-width: 650px) {
         border-top: 1px solid #e0e0e0;

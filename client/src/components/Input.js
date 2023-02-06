@@ -6,7 +6,6 @@ const Input = ({ type, placeholder, name, required, handleChange }) => {
             type={type}
             placeholder={placeholder}
             required={required}
-            // send the text to form with handleChange
             onChange={(e) => handleChange(name, e.target.value)}
         />
     );

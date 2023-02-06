@@ -63,8 +63,6 @@ const SearchResults = ({
     // others will not be bolded, seems like its not possible without DangerouslysetinnerHTML.
     const before = (itemName, query) => {
         let index = itemName.toLowerCase().indexOf(query.toLowerCase());
-        //console.log(index)
-        // console.log(itemName)
         let part = itemName.slice(0, index);
         return part;
     };
@@ -176,6 +174,10 @@ const SeeAll = styled.button`
     font-size: 14px;
     height: 30px;
     margin: 5px;
+    @media screen and (max-width: 500px) {
+        font-size: 12px;
+        height: 20px;
+    }
 `;
 const Wrapper = styled.div`
     z-index: 444;
@@ -190,6 +192,9 @@ const Result = styled.li`
     &:hover {
         cursor: default;
     }
+    @media screen and (max-width: 500px) {
+        height: 20px;
+    }
 `;
 const Match = styled.span`
     font-weight: bold;
@@ -202,5 +207,11 @@ const ResultsList = styled.ul`
     border-radius: 12px;
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    @media screen and (max-width: 590px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 9px;
+    }
 `;
 export default SearchResults;

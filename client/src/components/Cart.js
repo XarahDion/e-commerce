@@ -28,15 +28,12 @@ const Cart = () => {
         }
     }, [cart, state]);
 
-    //declare navigate as a function
     const navigate = useNavigate();
 
-    /// removes item from cart context
     const handleRemove = (currentItem) => {
         removeItemFromCart(currentItem._id);
     };
 
-    /// adds item to cart context
     const handleAdd = (e, currentItem) => {
         addItemToCart(currentItem._id);
     };
@@ -128,7 +125,7 @@ const BtnCheck = styled.button`
     }
 `;
 const TitleDiv = styled.div`
-    margin: 20px 0px 0px 54px;
+    margin: 0px 0px 0px 54px;
     display: flex;
     @media screen and (max-width: 900px) {
         margin-left: 24px;
@@ -170,7 +167,7 @@ const ItemsDiv = styled.div`
 const Div = styled.div`
     display: flex;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
     @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;

@@ -110,7 +110,7 @@ const Bar = styled.input`
     }
     @media screen and (max-width: 500px) {
         width: 300px;
-        font-size: 14px;
+        height: 24px;
     }
 `;
 const BarWrapper = styled.div`

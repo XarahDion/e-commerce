@@ -4,16 +4,14 @@ import styled from "styled-components";
 import ProductCard from "./ProductCard";
 
 const Suggestion = () => {
-    //import all the products from the context
     const { allProducts } = useContext(ProductContext);
     const [randomArr, setRandonArr] = useState([]);
 
-    //On mounts: this useeffect creates an array with 8 values
     useEffect(() => {
         setRandonArr(
             Array.from(
                 { length: 8 },
-                () => Math.floor(Math.random() * allProducts.length) // random number between 0 and the length of the array
+                () => Math.floor(Math.random() * allProducts.length)
             )
         );
     }, []);
@@ -65,6 +63,10 @@ const SecondaryTitles = styled.div`
     }
     @media (max-width: 768px) {
         padding-top: 42px;
+        h1 {
+            font-size: 28px;
+            line-height: 30px;
+        }
     }
 `;
 const SuggestionsWrapper = styled.div`

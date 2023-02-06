@@ -9,7 +9,6 @@ const OrderPage = ({ setorderId }) => {
     const { Total, cart } = useContext(CartContext);
     const navigate = useNavigate();
 
-    /// POSTs the order when the order now button is clicked on the Form
     const handleSubmit = (e, formData) => {
         e.preventDefault();
         fetch(`${process.env.REACT_APP_BACKEND_URL}/api/add-order`, {
@@ -19,7 +18,6 @@ const OrderPage = ({ setorderId }) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                /// sends the data to the BE in key/value pairs
                 _id: setorderId,
                 order: cart,
                 total: Total,
@@ -38,7 +36,7 @@ const OrderPage = ({ setorderId }) => {
                 if (data.status >= 300) {
                     window.alert(data.message);
                 } else {
-                    setorderId(data.data.insertedId, "orderId"); /// sends the orderId to PersistedState from App
+                    setorderId(data.data.insertedId, "orderId");
                     navigate(`/confirmation`);
                 }
             })
@@ -52,8 +50,11 @@ const OrderPage = ({ setorderId }) => {
             <div>
                 <TitleDiv>
                     <h2>Checkout</h2>
+                    <p>
+                        This is a demo app, no information or order will be
+                        processed.
+                    </p>
                 </TitleDiv>
-                {/* the Form component is passed the handleSubmit function */}
                 <Form handleSubmit={handleSubmit} />
             </div>
             <TotalDiv>
@@ -74,6 +75,9 @@ const Logo = styled.img`
 `;
 const TitleDiv = styled.div`
     margin: 20px 0px 0px 20px;
+    p {
+        color: red;
+    }
 `;
 const Div = styled.div`
     display: flex;

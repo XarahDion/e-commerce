@@ -16,7 +16,6 @@ export const ProductProvider = ({ children }) => {
     const shuffleArray = (array) => {
         return array.sort(() => 0.5 - Math.random());
     };
-    // FETCH ITEMS
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-items/`)
@@ -35,7 +34,7 @@ export const ProductProvider = ({ children }) => {
     });
     // array of 6 discount rates to be used in sales
     const discountOptions = [0.1, 0.2, 0.3, 0.4, 0.6, 0.5];
-    //sales is an array of a random selection of items for purposes of sales.
+    // sales is an array of a random selection of items for purposes of sales.
     // map through selected sale products and create new array with objects.
     // object format {_id:, salesDiscount}
 
@@ -56,7 +55,7 @@ export const ProductProvider = ({ children }) => {
     const allCats = allProducts?.map((item) => {
         return item.category;
     });
-    //cats stand for categories, scans through database and returns unique categories
+    // cats stand for categories, scans through database and returns unique categories
     // used in header, and any other logic required throughout the website
     const cats = allCats?.filter(unique);
 

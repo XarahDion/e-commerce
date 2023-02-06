@@ -64,7 +64,7 @@ const ProductPage = () => {
             {!allProducts ? (
                 <LogoContainer>
                     <Logo src={logo} alt="loading" />
-                </LogoContainer> // loading logo depended on fetched items
+                </LogoContainer>
             ) : (
                 <Container>
                     <ProductGrid>
@@ -119,8 +119,6 @@ const Explore = styled.div`
     text-align: start;
     @media (max-width: 650px) {
         margin: 0;
-        border-bottom: 1px solid #e0e0e0;
-        border-top: 1px solid #e0e0e0;
         h1 {
             font-size: 20px;
         }
@@ -137,7 +135,7 @@ const Wrapper = styled.div`
     margin: 0rem 3rem;
 `;
 const ProductGrid = styled.div`
-    padding-top: 20px;
+    padding-top: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
