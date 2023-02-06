@@ -1,4 +1,4 @@
-<h1 align="center">🌍 Welcome to E-Commerce 🌏</h1>
+<h1 align="center">⌚ Welcome to Wearably° ⌚</h1>
 
 > Click on the image below to view the live website.
 > 
