@@ -71,7 +71,11 @@ const NextPageContainer = styled.div`
         justify-content: center;
     }
 `;
-const NextPage = styled.div``;
+const NextPage = styled.div`
+    @media (max-width: 500px) {
+        display: none;
+    }
+`;
 const PageOfPage = styled.div`
     @media (max-width: 410px) {
         display: none;
@@ -87,9 +91,9 @@ const Wrapper = styled.div`
         margin: 50px 50px;
         width: auto;
     }
-    @media (max-width: 410px) {
-        justify-content: center;
-        margin: 20px;
+    @media (max-width: 500px) {
+        justify-content: space-around;
+        margin: 10px 20px 40px 20px;
     }
 `;
 export default Pagination;

@@ -115,6 +115,7 @@ const Price = styled.p`
 `;
 const Sales = styled.div`
     display: flex;
+    margin-top: 1rem;
 `;
 const OldPrice = styled.p`
     text-decoration: line-through;
@@ -177,8 +178,12 @@ const InfosContainer = styled.div`
         width: auto;
         text-align: center;
         h3 {
-            font-size: medium;
+            font-size: small;
+            line-height: 18px;
             max-width: 75%;
+        }
+        p {
+            font-size: small;
         }
     }
 `;

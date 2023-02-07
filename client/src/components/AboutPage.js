@@ -62,7 +62,6 @@ const AboutPageContainer = styled.div`
         margin-left: 8%;
     }
     @media screen and (max-width: 650px) {
-        border-top: 1px solid #e0e0e0;
         margin: 1rem 0;
         h1 {
             font-size: 30px;
@@ -73,7 +72,7 @@ const AboutPageContainer = styled.div`
     }
     @media screen and (max-width: 490px) {
         h1 {
-            font-size: 26px;
+            font-size: 24px;
         }
         h2 {
             font-size: 20px;

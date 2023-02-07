@@ -89,6 +89,9 @@ const OldPrice = styled.p`
     text-decoration: line-through;
     color: lightgrey;
     margin-right: 10px;
+    @media screen and (max-width: 460px) {
+        margin-right: 0px;
+    }
 `;
 const SaleTag = styled.div`
     background-color: red;
@@ -134,6 +137,7 @@ const Container = styled.div`
         padding: 1rem;
         h5 {
             font-size: 12px;
+            line-height: 16px;
         }
     }
 `;

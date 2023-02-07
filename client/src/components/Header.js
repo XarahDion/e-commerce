@@ -90,6 +90,7 @@ const LogoContainer = styled.div`
     margin-left: 2rem;
     @media screen and (max-width: 590px) {
         width: 120px;
+        margin: 0;
     }
 `;
 const Logo = styled.img`

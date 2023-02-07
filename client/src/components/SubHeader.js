@@ -82,6 +82,7 @@ const Category = styled.button`
         width: 160px;
     }
     @media (max-width: 650px) {
+        font-size: 10px;
         width: 120px;
         height: 24px;
     }

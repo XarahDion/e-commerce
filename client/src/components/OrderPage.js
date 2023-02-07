@@ -78,15 +78,18 @@ const TitleDiv = styled.div`
     p {
         color: red;
     }
+    @media (max-width: 500px) {
+        p {
+            font-size: small;
+            line-height: 16px;
+        }
+    }
 `;
 const Div = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem 4rem 2rem;
-    @media screen and (max-width: 650px) {
-        border-top: 1px solid #e0e0e0;
-    }
     @media screen and (max-width: 900px) {
         flex-direction: column;
         gap: 2rem;

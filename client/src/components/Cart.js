@@ -136,6 +136,10 @@ const TitleDiv = styled.div`
     @media screen and (max-width: 768px) {
         align-items: center;
         justify-content: center;
+        margin: 0;
+        h2 {
+            font-size: 24px;
+        }
     }
 `;
 const TotalDiv = styled.div`
@@ -171,9 +175,7 @@ const Div = styled.div`
     @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;
-    }
-    @media screen and (max-width: 650px) {
-        border-top: 1px solid #e0e0e0;
+        padding-top: 1rem;
     }
 `;
 const Span = styled.span`

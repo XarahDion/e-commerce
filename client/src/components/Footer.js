@@ -55,7 +55,7 @@ const FooterContainer = styled.div`
     justify-content: space-between;
     border-top: 1px solid #e0e0e0;
     @media screen and (max-width: 650px) {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 1rem 1rem;
         justify-content: center;
     }
 `;
