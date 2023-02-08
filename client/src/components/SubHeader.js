@@ -62,7 +62,6 @@ const Wrapper = styled.div`
     border-top: 1px solid #e0e0e0;
     width: 100%;
     padding: 5px;
-    margin-bottom: 1rem;
     @media (max-width: 650px) {
         flex-wrap: wrap;
         justify-content: center;

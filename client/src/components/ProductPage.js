@@ -118,7 +118,7 @@ const Explore = styled.div`
     margin: 2rem 0px 0px 2rem;
     text-align: start;
     @media (max-width: 650px) {
-        margin: 0;
+        margin: 1rem 0 0 0 ;
         h1 {
             font-size: 18px;
         }
