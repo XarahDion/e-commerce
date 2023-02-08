@@ -19,6 +19,7 @@ const Pagination = (props) => {
         } else {
             setCurrentPage(currentPage + 1);
         }
+        window.scrollTo(0, 0);
     };
     // if user presses back arrow, decrease by 1. if it is at first page, do not allow to decrease page number
     const backPageHandler = () => {
@@ -26,6 +27,7 @@ const Pagination = (props) => {
         } else {
             setCurrentPage(currentPage - 1);
         }
+        window.scrollTo(0, 0);
     };
 
     return (

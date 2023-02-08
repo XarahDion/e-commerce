@@ -32,6 +32,7 @@ const Cart = () => {
 
     const handleRemove = (currentItem) => {
         removeItemFromCart(currentItem._id);
+        window.scrollTo(0, 0);
     };
 
     const handleAdd = (e, currentItem) => {

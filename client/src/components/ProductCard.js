@@ -25,6 +25,7 @@ const ProductCard = ({ item }) => {
 
     const handleNavigate = () => {
         navigate(`/products/${item._id}`);
+        window.scrollTo(0, 0);
     };
 
     let shortItemName = item.name.split(" ").slice(0, 6).join(" ");

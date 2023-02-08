@@ -7,10 +7,12 @@ import logo from "../assets/loadingIcon.gif";
 const SubHeader = () => {
     const navigate = useNavigate();
     const { cats, setSelectedCat } = useContext(ProductContext);
+
     const handleCatClick = (ev) => {
         ev.preventDefault();
         setSelectedCat(ev.target.innerText);
         navigate(`/product-page/${ev.target.innerText.toLowerCase()}`);
+        window.scrollTo(0, 0);
     };
 
     const homeHandler = () => {
@@ -19,6 +21,7 @@ const SubHeader = () => {
 
     const saleHandler = () => {
         navigate("/product-page/deals");
+        window.scrollTo(0, 0);
     };
 
     return (
@@ -87,7 +90,6 @@ const Category = styled.button`
         width: 100px;
         height: 24px;
         padding: 4px 0px;
-        border: 1px solid red;
     }
 `;
 export default SubHeader;

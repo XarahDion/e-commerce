@@ -76,6 +76,9 @@ const SuggestionsWrapper = styled.div`
     justify-content: center;
     gap: 0.5rem;
     margin: 0 auto;
+    @media (max-width: 900px) {
+        padding-bottom: 42px;
+    }
 `;
 
 export default Suggestion;

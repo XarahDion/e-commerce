@@ -198,6 +198,9 @@ const StyledButton = styled.button`
     &:disabled {
         pointer-events: none;
     }
+    &:active {
+        background-color: var(--border-color);
+    }
 `;
 
 export default ProductDetails;
