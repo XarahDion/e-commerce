@@ -47,24 +47,16 @@ const SecondaryTitles = styled.div`
         font-family: "inter", sans-serif;
         font-size: 16px;
         color: #1a202c;
-        @media (max-width: 768px) {
-            margin-left: 16px;
-            margin-right: 16px;
-        }
     }
     h1 {
         font-size: 36px;
         line-height: 48px;
         color: #1a202c;
-        @media (max-width: 768px) {
-            margin-left: 16px;
-            margin-right: 16px;
-        }
     }
     @media (max-width: 768px) {
-        padding-top: 42px;
+        padding-top: 32px;
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             line-height: 30px;
         }
     }

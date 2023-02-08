@@ -175,7 +175,7 @@ const SeeAll = styled.button`
     height: 30px;
     margin: 5px;
     @media screen and (max-width: 500px) {
-        font-size: 12px;
+        font-size: 11px;
         height: 20px;
     }
 `;
@@ -194,6 +194,7 @@ const Result = styled.li`
     }
     @media screen and (max-width: 500px) {
         height: 20px;
+        padding: 2px;
     }
 `;
 const Match = styled.span`
@@ -207,11 +208,19 @@ const ResultsList = styled.ul`
     border-radius: 12px;
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    @media screen and (max-width: 590px) {
+    @media screen and (max-width: 820px) {
         font-size: 12px;
+        letter-spacing: -0.4px;
+
+    }
+    @media screen and (max-width: 590px) {
+        font-size: 10px;
+        letter-spacing: -0.4px;
+
     }
     @media screen and (max-width: 500px) {
-        font-size: 9px;
+        font-size: 8px;
+        letter-spacing: -0.4px;
     }
 `;
 export default SearchResults;

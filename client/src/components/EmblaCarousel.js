@@ -80,16 +80,14 @@ const EmblaCarousel = ({ slides, options = { loop: false } }) => {
 
 const EmblaSlideshowWrapper = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     background-color: #f6f7fb;
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: 768px) {
-        width: 100%;
-        height: 100%;
+        height: 320px;
+        align-items: flex-start;
     }
 `;
 const EmblaContainer = styled.div`
@@ -101,11 +99,13 @@ const EmblaContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        @media (max-width: 768px) {
+            height: 70%;
+        }
     }
 `;
 
