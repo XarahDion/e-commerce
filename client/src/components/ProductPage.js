@@ -120,7 +120,7 @@ const Explore = styled.div`
     @media (max-width: 650px) {
         margin: 0;
         h1 {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     @media (max-width: 825px) {

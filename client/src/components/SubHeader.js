@@ -83,7 +83,7 @@ const Category = styled.button`
     }
     @media (max-width: 650px) {
         font-size: 10px;
-        width: 120px;
+        width: 110px;
         height: 24px;
     }
 `;
